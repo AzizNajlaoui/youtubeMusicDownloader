@@ -4,9 +4,7 @@ const app = document.getElementById("app");
 const input = app.querySelector("#youtube-url");
 const button = app.querySelector("#convert-button");
 
-const BACKEND_URL =
-  import.meta.env.VITE_BACKEND_URL ||
-  "http://localhost:8000/download_audio?url=";
+const BACKEND_URL = "/download_audio?url=";
 
 let controller = null;
 let isLoading = false;
@@ -45,7 +43,10 @@ button.addEventListener("click", async (e) => {
 
   const url = input.value || "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 
-  if (!url.startsWith("https://www.youtube.com/")) {
+  if (
+    !url.startsWith("https://www.youtube.com/") ||
+    !url.startsWith("www.youtube.com/")
+  ) {
     showToast("Invalid YouTube URL format", "error");
     return;
   }
