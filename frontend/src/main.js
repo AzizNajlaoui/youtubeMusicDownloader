@@ -12,7 +12,7 @@ let isLoading = false;
 function setLoading() {
   button.innerHTML = "";
   const img = document.createElement("img");
-  img.src = "/loader.svg";
+  img.src = "/assests/loader.svg";
   img.className = "w-6 h-6 animate-spin";
   img.style.animationDuration = "1.3s";
   button.appendChild(img);
@@ -42,14 +42,6 @@ button.addEventListener("click", async (e) => {
   }
 
   const url = input.value || "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-
-  if (
-    !url.startsWith("https://www.youtube.com/") &&
-    !url.startsWith("www.youtube.com/")
-  ) {
-    showToast("Invalid YouTube URL format", "error");
-    return;
-  }
 
   controller = new AbortController();
   isLoading = true;
