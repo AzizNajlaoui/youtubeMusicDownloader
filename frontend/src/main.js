@@ -12,7 +12,7 @@ let isLoading = false;
 function setLoading() {
   button.innerHTML = "";
   const img = document.createElement("img");
-  img.src = "src/loader.svg";
+  img.src = "assets/loader.svg";
   img.className = "w-6 h-6 animate-spin";
   img.style.animationDuration = "1.3s";
   button.appendChild(img);
