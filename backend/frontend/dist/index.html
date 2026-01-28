@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>youtube music downloader</title>
+    <script type="module" crossorigin src="/assets/index-8ltR-VOE.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-C4V5I8gf.css">
+  </head>
+  <bod >
+    <div
+      id="app"
+      class="bg-black text-neutral-200  min-h-screen flex flex-col items-center gap-20"
+    >
+      <section class=" flex items-center justify-center mr-15  mt-10 select-none">
+        <div class="relative  select-none">
+          <img src="/assets/logo-DXT6Hy5f.png" alt="logo" width="200" class="select-none" />
+          <div class="absolute bg-black w-10 h-10 bottom-0 right-0"></div>
+        </div>
+        <h1 class= " text-2xl sm:text-5xl font-noto font-extrabold select-none ">YTDownload</h1>
+      </section>
+
+      <form class="container mx-auto max-w-160">
+        <fieldset class="flex flex-col">
+          <legend class="font-bold pl-4 mb-4 text-xl">
+            insert a
+            <span class="italic underline text-red-400">youtube</span> video
+            <span>URL</span> :
+          </legend>
+          <div
+            class="flex items-center border border-neutral-800 p-2 pl-6 rounded-full justify-between"
+          >
+            <input
+              type="text"
+              name="youtube-url"
+              id="youtube-url"
+              placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              class="placeholder:text-neutral-500 placeholder:font-medium flex-1 outline-none text-neutral-100"
+            />
+            <button
+            id="convert-button"
+              class="bg-neutral-100 text-black py-2 w-fit p-4 font-bold rounded-full cursor-pointer hover:bg-neutral-300 transition-all duration-100 whitespace-nowrap flex flex-row-reverse gap-1"
+            >
+              convert
+            </button>
+            </button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
