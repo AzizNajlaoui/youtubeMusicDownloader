@@ -44,7 +44,7 @@ button.addEventListener("click", async (e) => {
   const url = input.value || "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 
   if (
-    !url.startsWith("https://www.youtube.com/") ||
+    !url.startsWith("https://www.youtube.com/") &&
     !url.startsWith("www.youtube.com/")
   ) {
     showToast("Invalid YouTube URL format", "error");
