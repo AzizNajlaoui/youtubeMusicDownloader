@@ -72,11 +72,14 @@ async def download_audio_endpoint(url : str , downloadPlayList : bool = False , 
 
 
 
-
 if __name__ == "__main__":
+    
 
     if not os.path.exists("downloads"):
         os.makedirs("downloads")
 
-
-    uvicorn.run(app , host="https://youtubemusicdownloader-1.onrender.com")
+    uvicorn.run(
+        app,
+        host="0.0.0.0",   # VERY important for Render
+        port=int(os.environ.get("PORT", 8000))
+    )
